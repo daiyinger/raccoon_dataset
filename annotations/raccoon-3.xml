@@ -1,26 +1,26 @@
-<annotation verified="yes">
+<annotation>
 	<folder>images</folder>
-	<filename>raccoon-3.png</filename>
-	<path>/Users/datitran/Desktop/raccoon/images/raccoon-3.png</path>
+	<filename>raccoon-3.jpg</filename>
+	<path>D:\DrFiles\Code\Machine\raccoon_dataset\images\raccoon-3.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>720</width>
-		<height>480</height>
+		<width>1440</width>
+		<height>1080</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>raccoon</name>
+		<name>car</name>
 		<pose>Unspecified</pose>
-		<truncated>1</truncated>
+		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1</xmin>
-			<ymin>1</ymin>
-			<xmax>720</xmax>
-			<ymax>476</ymax>
+			<xmin>462</xmin>
+			<ymin>836</ymin>
+			<xmax>752</xmax>
+			<ymax>883</ymax>
 		</bndbox>
 	</object>
 </annotation>
