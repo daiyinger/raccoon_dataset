@@ -6,21 +6,21 @@
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>720</width>
-		<height>480</height>
+		<width>223</width>
+		<height>212</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
 	<object>
 		<name>raccoon</name>
 		<pose>Unspecified</pose>
-		<truncated>1</truncated>
+		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1</xmin>
-			<ymin>1</ymin>
-			<xmax>720</xmax>
-			<ymax>476</ymax>
+			<xmin>8</xmin>
+			<ymin>102</ymin>
+			<xmax>213</xmax>
+			<ymax>131</ymax>
 		</bndbox>
 	</object>
 </annotation>
