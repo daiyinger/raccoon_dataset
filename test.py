@@ -7,8 +7,9 @@ from object_detection.utils import visualization_utils as vis_util
 
 class TOD(object):
     def __init__(self):
-        self.PATH_TO_CKPT = r'E:\code\raccoon_dataset\training\output_inference_graph.pb'
-        self.PATH_TO_LABELS = r'E:\code\raccoon_dataset\training\object-detection.pbtxt'
+        #self.PATH_TO_CKPT = r'E:\code\raccoon_dataset\training\output_inference_graph.pb'
+        self.PATH_TO_CKPT = r'E:\code\raccoon_dataset\training\output_inference_graph.pb\frozen_inference_graph.pb'
+        self.PATH_TO_LABELS = r'raccoon_label_map.pbtxt'
         self.NUM_CLASSES = 1
         self.detection_graph = self._load_model()
         self.category_index = self._load_label_map()
@@ -65,8 +66,8 @@ class TOD(object):
 
 
 if __name__ == '__main__':
-    image_list = ['test\\raccoon-1.jpg','test\\raccoon-2.jpg','test\\raccoon-5.jpg',
-                  'test\\raccoon-3.jpg','test\\raccoon-4.jpg', 'test\\image.jpg']
+    image_list = ['images\\raccoon-1.jpg','images\\raccoon-2.jpg','images\\raccoon-3.jpg',
+                  'images\\raccoon-4.jpg','images\\raccoon-5.jpg', 'test\\image.jpg']
     detecotr = TOD()
     num = 0
     for data in image_list:
