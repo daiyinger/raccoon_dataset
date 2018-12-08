@@ -7,8 +7,9 @@ from object_detection.utils import visualization_utils as vis_util
 
 class TOD(object):
     def __init__(self):
-        self.PATH_TO_CKPT = r'E:\code\raccoon_dataset\training\output_inference_graph.pb'
-        self.PATH_TO_LABELS = r'E:\code\raccoon_dataset\training\object-detection.pbtxt'
+        #self.PATH_TO_CKPT = r'E:\code\raccoon_dataset\training\output_inference_graph.pb'
+        self.PATH_TO_CKPT = r'.\data\frozen_inference_graph.pb\frozen_inference_graph.pb'
+        self.PATH_TO_LABELS = r'raccoon_label_map.pbtxt'
         self.NUM_CLASSES = 1
         self.detection_graph = self._load_model()
         self.category_index = self._load_label_map()
@@ -57,7 +58,7 @@ class TOD(object):
                     line_thickness=8)
 
                 #s_boxes = boxes[scores > 0.5]
-                s_classes = classes[scores > 0.5]
+                s_classes = classes[scores > 0.7]
                 #s_scores=scores[scores>0.5]
                 if(len(s_classes) > 0):
                     result = True
@@ -65,14 +66,14 @@ class TOD(object):
 
 
 if __name__ == '__main__':
-    image_list = ['test\\raccoon-1.jpg','test\\raccoon-2.jpg','test\\raccoon-5.jpg',
-                  'test\\raccoon-3.jpg','test\\raccoon-4.jpg', 'test\\image.jpg']
+    image_list = ['test\\test1.jpg','test\\test2.jpg','test\\test3.jpg','test\\test.jpg', 'images\\raccoon-1.jpg','images\\raccoon-2.jpg','images\\raccoon-5.jpg',
+                  'images\\raccoon-3.jpg','images\\raccoon-4.jpg', 'images\\image.jpg']
     detecotr = TOD()
     num = 0
     for data in image_list:
         result, image = detecotr.detect(cv2.imread(data))
         print(result)
         num += 1
-        cv2.imshow("detection"+str(num), image)
-        cv2.waitKey(2000)
-        cv2.destroyAllWindows()
+        cv2.imshow("detection",image)
+        cv2.waitKey(1000)
+cv2.destroyAllWindows()
