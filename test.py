@@ -66,7 +66,7 @@ class TOD(object):
 
 
 if __name__ == '__main__':
-    image_list = ['test\\test1.jpg','test\\test2.jpg','test\\test3.jpg','test\\test.jpg', 'images\\raccoon-1.jpg','images\\raccoon-2.jpg','images\\raccoon-5.jpg',
+    image_list = ['test\\test1.jpg','test\\test2.jpg','test\\test3.jpg', 'images\\raccoon-1.jpg','images\\raccoon-2.jpg','images\\raccoon-5.jpg',
                   'images\\raccoon-3.jpg','images\\raccoon-4.jpg', 'images\\image.jpg']
     detecotr = TOD()
     num = 0
